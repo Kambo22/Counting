@@ -1,15 +1,18 @@
 let count = 0;
+const countTextElement = document.getElementById('countText');
+const nextNumberElement = document.getElementById('nextNumber');
 
-function countUp() {
-    count++;
-    document.getElementById('countText').textContent = count;
-    changeBackground();
+function updateCount() {
+  count++;
+  countTextElement.textContent = count;
+  nextNumberElement.textContent = count + 1;
+  updateBackground();
 }
 
-function changeBackground() {
-    let colors = ['#FF5733', '#33FF57', '#5733FF', '#FF3357', '#33B5FF'];
-    let randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.backgroundColor = randomColor;
+function updateBackground() {
+  const colors = ['#FF5733', '#FFC300', '#DAF7A6', '#C70039', '#900C3F'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
 }
 
-setInterval(countUp, 1000);
+setInterval(updateCount, 1000);

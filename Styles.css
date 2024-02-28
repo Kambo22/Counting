@@ -16,3 +16,12 @@ body, html {
 #countText {
     color: white;
 }
+
+#number:hover {
+    background-color: #ddd;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
