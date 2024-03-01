@@ -19,9 +19,9 @@ function updateCount() {
 // Function that updates the background color
 function updateBackground() {
   // Array of colors
-  const colors = ['#FF5733', '#FFC300', '#DAF7A6', '#C70039', '#900C3F'];
+  
   // Choose a random color from colors[]
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
   // Set the background color of body
   document.body.style.backgroundColor = randomColor;
 }
